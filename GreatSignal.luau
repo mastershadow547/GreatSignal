@@ -1,8 +1,9 @@
 -- Roblox Username: dragon33233
 -- Discord Username: biggiecheese132
 -- This module implements a high-performance Linked-List Signal system with Parallel Luau support.
+-- Formatted Using StyLua Extension by JohnnyMorganz 
 
---[=[ 
+--[=[
     INTERNAL SIGNAL MODULE
     Works like a BindableEvent but with better performance and strict typing.
     
