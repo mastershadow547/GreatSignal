@@ -1,7 +1,6 @@
 -- Roblox Username: dragon33233
 -- Discord Username: biggiecheese132
 -- This module implements a high-performance Linked-List Signal system with Parallel Luau support.
--- Formatted Using StyLua Extension by JohnnyMorganz 
 
 --[=[ 
     INTERNAL SIGNAL MODULE
@@ -205,7 +204,7 @@ function Signal:ConnectParallel(cb: (...any) -> ()): Connection
 
 	self._count += 1
 	return conn :: any
-end
+	end
 
 function Signal:Fire(...)
 	local self = self :: Signal
