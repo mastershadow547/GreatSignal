@@ -1,5 +1,4 @@
--- Roblox Username: dragon33233
--- Discord Username: biggiecheese132
+-- Roblox Username: dragon33233 | Discord Username: biggiecheese13
 -- This module implements a high-performance Linked-List Signal system with Parallel Luau support.
 
 --[=[ 
