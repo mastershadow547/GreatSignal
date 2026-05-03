@@ -1,5 +1,8 @@
 -- Roblox Username: dragon33233 | Discord Username: biggiecheese13
 -- This module implements a high-performance Linked-List Signal system with Parallel Luau support.
+-- https://drive.google.com/file/d/175LwDjl2vEonw_B88sf0mAtJy5uCSBma/view?usp=sharing
+-- That is a video to see what it can do its a diagnostic script i made for it to tets it out this also
+-- shows that my script is inside https://www.roblox.com/games/133378444483418/Module-Developing
 
 --[=[ 
     INTERNAL SIGNAL MODULE
