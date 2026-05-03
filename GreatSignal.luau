@@ -3,7 +3,7 @@
 -- This module implements a high-performance Linked-List Signal system with Parallel Luau support.
 -- Formatted Using StyLua Extension by JohnnyMorganz 
 
---[=[
+--[=[ 
     INTERNAL SIGNAL MODULE
     Works like a BindableEvent but with better performance and strict typing.
     
@@ -13,15 +13,15 @@
     
     SECURITY WARNINGS:
     1. CONTEXT ISOLATION: This is NOT a replacement for RemoteEvents. It cannot 
-       communicate across the network.
-    2. METATABLE HOOKING: On the Client, define important functions (like Signal.Fire) 
-       as locals at the top of your script to prevent exploiter interception via 
-       metamethod hooking.
-    3. SPOOFING: Never trust data fired from a Client-side signal for sensitive 
-       logic. Assume an exploiter can see and fire any Signal existing in 
-       client memory using tools like 'getconnections()'.
-    4. SERVER SECURITY: Server-side execution is secure from external memory 
-       tampering and does not require local function caching for security.
+       communicate across client to server or server to client.
+    2. METATABLE HOOKING: On the Client define important functions (like Signal.Fire) 
+       as locals at the top of your script to prevent exploiter interception with 
+       metatable hooking.
+    3. SPOOFING: Never trust data fired from a Client side signal for important 
+       logic. Always think an exploiter can see and fire any Signal existing in the
+       client memory using tools or things like 'getconnections()'.
+    4. SERVER SECURITY: Server-side is secure from external memory 
+       tampering and does not require local function for security.
 ]=]
 
 --!strict
