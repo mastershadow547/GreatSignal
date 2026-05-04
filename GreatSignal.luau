@@ -78,7 +78,7 @@ local function packArgs(...): PackedArgs
 end
 
 local function runCallback(cb: (...any) -> (), name: string, tb: string?, args: PackedArgs)
-		local ok, err = pcall(function()
+	local ok, err = pcall(function()
 		cb(table.unpack(args, 1, args.n))
 	end)
 
@@ -88,7 +88,7 @@ local function runCallback(cb: (...any) -> (), name: string, tb: string?, args: 
 end
 
 local function runParallel(cb: (...any) -> (), name: string, tb: string?, args: PackedArgs)
-	
+
 	local success = pcall(task.desynchronize)
 	if not success then
 		warn("There was a problem during function runParallel!")
@@ -204,7 +204,7 @@ function Signal:ConnectParallel(cb: (...any) -> ()): Connection
 
 	self._count += 1
 	return conn :: any
-	end
+end
 
 function Signal:Fire(...)
 	local self = self :: Signal
@@ -293,13 +293,12 @@ function Signal:Wait(): ...any
 		if self._waiters[thread] then
 			self._waiters[thread] = nil
 			conn:Disconnect()
-			task.spawn(thread, ...)
+			coroutine.resume(thread, ...) 
 		end
 	end)
 
-	return (coroutine.yield() :: any)
+	return coroutine.yield()
 end
-
 function Signal:Proxy(otherSignal: RBXScriptSignal): RBXScriptConnection
 	local self = self :: Signal
 	local conn = (otherSignal:Connect(function(...)
