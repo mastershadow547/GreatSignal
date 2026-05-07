@@ -1,4 +1,5 @@
 -- Roblox Username: dragon33233 | Discord Username: biggiecheese13
+-- Hidden Devs PLEASE ACCEPT THE APPLICATION MAN I TRIED EVERYTHING!!!
 --[=[ 
     GREATSIGNAL API
     
